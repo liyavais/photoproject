@@ -2,7 +2,7 @@ h1 {
     font-weight: 500;
     font-size: 42px;
     margin: 0;
-    
+
 }
 
 .profile__job {
@@ -28,4 +28,24 @@ h1 {
     font-weight: 900;
     font-size: 24px;
     line-height: 0;
+}
+
+.popup__header {
+    color: black;
+    font-weight: 900;
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 35px;
+}
+
+.popup__container input::placeholder {
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.popup__button-submit {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
 }
