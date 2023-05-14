@@ -32,13 +32,7 @@
                 onclick="window.openNeededPopup(this)">+</button>
         </div>
         <div class="card-container">
-            <div class="card">
-                <img class="card__img" src="./src/images/Photo1.png" alt="">
-                <div class="card__description">
-                    <p class="card__name">Карачаевск</p>
-                    <img class="card__like" src="./src/images/Vector.svg" alt="">
-                </div>
-            </div>
+            
         </div>
     </div>
     <div class="popup-group">
@@ -49,17 +43,17 @@
                 <input type="text" class="popup__input-name" placeholder="Новое имя" id="input-name">
                 <input type="text" class="popup__input-description" placeholder="Новое описание"
                     id="input-description">
-                <input type="submit" class="popup__button-submit">Сохранить</input>
+                <input type="submit" class="popup__button-submit" id="add-new-name">Сохранить</input>
             </form>
 
         </div>
         <div class="popup__container" id="add-new-image-profile">
             <img class="popup__button-close" src="./src/images/Close Icon.png" alt="">
-            <h3 class="popup__header" style="color: red">Редактировать зепу</h3>
+            <h3 class="popup__header" >Новое место</h3>
             <form>
-                <input type="text" class="popup__input-name" placeholder="Кот Путешественник">
-                <input type="text" class="popup__input-description" placeholder="Исследователь мира">
-                <input type='submit' class="popup__button-submit2">Сохранить</input>
+                <input type="text" class="popup__input-name" placeholder="Введите название" id="place-name">
+                <input type="text" class="popup__input-description" placeholder="Введите ссылку" id="link-by-user">
+                <input type='submit' class="popup__button-submit" id="add-new-image">Сохранить</input>
             </form>
         </div>
     </div>

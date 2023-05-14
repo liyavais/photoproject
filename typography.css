@@ -28,7 +28,11 @@ h1 {
     margin: 0;
     font-weight: 900;
     font-size: 24px;
-    line-height: 0;
+    text-overflow: ellipsis;
+
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .popup__header {

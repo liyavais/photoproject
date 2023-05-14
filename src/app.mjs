@@ -1,7 +1,7 @@
-import { renderCards } from './modules/render-cards.mjs'
+import { renderCardsList } from './modules/render-cards.mjs'
 import { initialCards } from './data/cards-list.mjs'
 
-renderCards()
+
 
 const buttonNewImage = document.querySelector('.profile__add-new-image-button')
 const popUpGroup = document.querySelector('.popup-group')
@@ -29,10 +29,10 @@ function openNeededPopup(element) {
     popUpGroup.classList.add('popup--active')
 }
 
-const addNewImagePopup = document.getElementById('edit-profile')
-const addNewImageButton = addNewImagePopup.querySelector('.popup__button-submit')
+const addNewNamePopup = document.getElementById('edit-profile')
+const addNewNameButton = addNewNamePopup.querySelector('#add-new-name')
 
-addNewImageButton.onclick = (evt) => {
+addNewNameButton.onclick = (evt) => {
     evt.preventDefault()
     const inputName = document.getElementById('input-name')
     const inputProfileDescription = document.getElementById('input-description')
@@ -42,7 +42,35 @@ addNewImageButton.onclick = (evt) => {
     nameUser.innerHTML = inputName.value
     descriptionUser.innerHTML = inputProfileDescription.value
     closeAllPopups()
-    addNewImagePopup.querySelector('form').reset()
+    addNewNamePopup.querySelector('form').reset()
 }
 
+
+const addNewImagePopup = document.getElementById('add-new-image-profile')
+const addNewImageButton = addNewImagePopup.querySelector('#add-new-image')
+
+addNewImageButton.onclick = (evt) => {
+    evt.preventDefault()
+    const placeName = document.getElementById('place-name')
+    const linkByUser = document.getElementById('link-by-user')
+    console.log(placeName.value, linkByUser.value)
+    const newObject = {
+        name: placeName.value,
+        link: linkByUser.value
+      }
+      console.log(newObject)
+    initialCards.push(newObject)
+    renderCardsList()
+    closeAllPopups()
+    addNewImagePopup.querySelector('form').reset()
+    
+}
+
+window.addEventListener('DOMContentLoaded', renderCardsList)
+
+
+
 window.openNeededPopup = openNeededPopup
+
+
+
