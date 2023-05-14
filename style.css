@@ -76,8 +76,8 @@ header {
     height: 19px;
 }
 
-.popup {
-    display: flex;
+.popup-group {
+    display: none;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -89,6 +89,7 @@ header {
 }
 
 .popup__container {
+    display: none;
     position: relative;
     width: 430px;
     height: 330px;
@@ -98,14 +99,20 @@ header {
     padding: 35px;
 }
 
+.popup__container--active {
+    display: block;
+}
+
+
 .popup__button-close {
     position: absolute;
     left: 440px;
     bottom: 335px;
+    cursor: pointer;
 }
 
-.popup_opened {
-    
+.popup--active {
+    display: flex;    
 }
 
 .popup__container input {

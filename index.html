@@ -20,11 +20,13 @@
             <div class="profile__description">
                 <div class="profile__name">
                     <h1>Кот Путешественник</h1>
-                    <img class="profile__edit-button" src="./src/images/Edit Button.svg" alt="">
+                    <img class="profile__edit-button" src="./src/images/Edit Button.svg" alt=""
+                        data-idOfContainer="edit-profile" onclick="openNeededPopup(this)">
                 </div>
                 <p class="profile__job">Исследователь мира</p>
             </div>
-            <button class="profile__add-new-image-button">+</button>
+            <button class="profile__add-new-image-button" data-idOfContainer="add-new-image-profile"
+                onclick="openNeededPopup(this)">+</button>
         </div>
         <div class="card-container">
             <div class="card">
@@ -36,14 +38,26 @@
             </div>
         </div>
     </div>
-    <div class="popup">
-        <div class="popup__container">
+    <div class="popup-group">
+        <div class="popup__container" id="edit-profile">
             <img class="popup__button-close" src="./src/images/Close Icon.png" alt="">
             <h3 class="popup__header">Редактировать профиль</h3>
-            <input type="text" class="popup__input-name" placeholder="Кот Путешественник">
-            <input type="text" class="popup__input-description" placeholder="Исследователь мира">
-            <button class="popup__button-submit">Сохранить</button>
+            <form>
+                <input type="text" class="popup__input-name" placeholder="Кот Путешественник" id="input-name">
+                <input type="text" class="popup__input-description" placeholder="Исследователь мира"
+                    id="input-description">
+                <input type="submit" class="popup__button-submit">Сохранить</input>
+            </form>
 
+        </div>
+        <div class="popup__container" id="add-new-image-profile">
+            <img class="popup__button-close" src="./src/images/Close Icon.png" alt="">
+            <h3 class="popup__header" style="color: red">Редактировать зепу</h3>
+            <form>
+                <input type="text" class="popup__input-name" placeholder="Кот Путешественник">
+                <input type="text" class="popup__input-description" placeholder="Исследователь мира">
+                <input type='submit' class="popup__button-submit2">Сохранить</input>
+            </form>
         </div>
     </div>
     <script src="./src/app.js"></script>
