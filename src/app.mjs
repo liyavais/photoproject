@@ -1,42 +1,38 @@
-// import { renderCards } from './modules/render-cards.mjs'
-// import { initialCards } from './data/cards-list.mjs'
+import { renderCards } from './modules/render-cards.mjs'
+import { initialCards } from './data/cards-list.mjs'
 
-document.addEventListener("DOMContentLoaded", function () {
-  console.log('123')
+renderCards()
 
+const buttonNewImage = document.querySelector('.profile__add-new-image-button')
+const popUpGroup = document.querySelector('.popup-group')
+const buttonsPopupClose = document.querySelectorAll('.popup__button-close')
 
-  const buttonNewImage = document.querySelector('.profile__add-new-image-button')
-  const popUpGroup = document.querySelector('.popup-group')
-  const buttonsPopupClose = document.querySelectorAll('.popup__button-close')
-
-
-  for (let button of buttonsPopupClose) {
+for (let button of buttonsPopupClose) {
     button.onclick = closeAllPopups
-  }
+}
 
-
-  function closeAllPopups() {
+function closeAllPopups() {
     console.log('закрыт')
     const popUpContainerList = document.querySelectorAll('.popup__container')
 
     for (let item of popUpContainerList) {
-      item.classList.remove('popup__container--active')
+        item.classList.remove('popup__container--active')
     }
 
     popUpGroup.classList.remove('popup--active')
-  }
+}
 
-  function openNeededPopup(element) {
+function openNeededPopup(element) {
     const neededPopupContainer = element.dataset.idofcontainer
     const neededPopup = document.getElementById(neededPopupContainer)
     neededPopup.classList.add('popup__container--active')
     popUpGroup.classList.add('popup--active')
-  }
+}
 
-  const addNewImagePopup = document.getElementById('edit-profile')
-  const addNewImageButton = addNewImagePopup.querySelector('.popup__button-submit')
+const addNewImagePopup = document.getElementById('edit-profile')
+const addNewImageButton = addNewImagePopup.querySelector('.popup__button-submit')
 
-  addNewImageButton.onclick = (evt) => {
+addNewImageButton.onclick = (evt) => {
     evt.preventDefault()
     const inputName = document.getElementById('input-name')
     const inputProfileDescription = document.getElementById('input-description')
@@ -47,8 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
     descriptionUser.innerHTML = inputProfileDescription.value
     closeAllPopups()
     addNewImagePopup.querySelector('form').reset()
+}
 
-  }
-
-
-})
+window.openNeededPopup = openNeededPopup

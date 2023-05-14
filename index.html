@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-    <script type="module" src="./src/app.js"></script>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesto</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="typography.css">
+
+    
 </head>
 
 <body>
@@ -22,12 +24,12 @@
                 <div class="profile__name">
                     <h1>Кот Путешественник</h1>
                     <img class="profile__edit-button" src="./src/images/Edit Button.svg" alt=""
-                        data-idOfContainer="edit-profile" onclick="openNeededPopup(this)">
+                        data-idOfContainer="edit-profile" onclick="window.openNeededPopup(this)">
                 </div>
                 <p class="profile__job">Исследователь мира</p>
             </div>
             <button class="profile__add-new-image-button" data-idOfContainer="add-new-image-profile"
-                onclick="openNeededPopup(this)">+</button>
+                onclick="window.openNeededPopup(this)">+</button>
         </div>
         <div class="card-container">
             <div class="card">
@@ -62,7 +64,8 @@
         </div>
     </div>
     
-
+    <script type="module" src="./src/app.mjs" />
+    
 </body>
 
 </html>
