@@ -43,16 +43,18 @@ header {
 .profile__edit-button {
     width: 24px;
     height: 24px;
+    cursor: pointer;
 
 }
 
-.card-container {
+.card-container {   
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 17px;
 }
 
 .card {
+    position: relative;
     background-color: white;
     height: 360px;
     border-radius: 10px;
@@ -60,9 +62,11 @@ header {
 }
 
 .card__img {
+   
     width: 282px;
     height: 282px;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .card__description {
@@ -74,6 +78,32 @@ header {
 
 .card__like {
     height: 19px;
+    padding-right: 18px;
+    background-image: url(./src/images/Vector.svg);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;  
+    cursor: pointer;
+   }
+   
+.added_like {
+    background-image: url(./src/images/Likeblack.png);
+}
+
+.card__delete {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: 10px;
+    top: 15px;
+    background-image: url(./src/images/Urna.png);
+    background-repeat: no-repeat;
+    background-color: transparent;  
+    cursor: pointer;
+    border: none;
+    
+    
+
 }
 
 .popup-group {
@@ -131,5 +161,6 @@ header {
     border-radius: 2px;
     border: 0;
     margin-top: 20px;
+    cursor: pointer;
 
 }

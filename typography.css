@@ -23,13 +23,17 @@ h1 {
     cursor: pointer;
 }
 
+.profile__add-new-image-button:hover {
+    border: 1px solid rgb(159, 159, 159);
+    color:  rgb(159, 159, 159);
+}
+
 .card__name {
     color: black;
     margin: 0;
     font-weight: 900;
     font-size: 24px;
     text-overflow: ellipsis;
-
     width: 100%;
     overflow: hidden;
     white-space: nowrap;

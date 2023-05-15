@@ -70,6 +70,8 @@ window.addEventListener('DOMContentLoaded', renderCardsList)
 
 
 
+
+
 window.openNeededPopup = openNeededPopup
 
 
