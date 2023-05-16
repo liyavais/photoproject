@@ -1,5 +1,6 @@
 import { renderCardsList } from './modules/render-cards.mjs'
 import { initialCards } from './data/cards-list.mjs'
+import { inputLengthValidation } from './data/validation.mjs'
 
 
 
@@ -65,6 +66,9 @@ addNewImageButton.onclick = (evt) => {
     addNewImagePopup.querySelector('form').reset()
     
 }
+
+
+window.addEventListener('DOMContentLoaded', inputLengthValidation)
 
 window.addEventListener('DOMContentLoaded', renderCardsList)
 

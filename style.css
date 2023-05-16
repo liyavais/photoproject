@@ -47,7 +47,7 @@ header {
 
 }
 
-.card-container {   
+.card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 17px;
@@ -62,7 +62,7 @@ header {
 }
 
 .card__img {
-   
+
     width: 282px;
     height: 282px;
     object-fit: cover;
@@ -82,10 +82,10 @@ header {
     background-image: url(./src/images/Vector.svg);
     background-repeat: no-repeat;
     border: none;
-    background-color: transparent;  
+    background-color: transparent;
     cursor: pointer;
-   }
-   
+}
+
 .added_like {
     background-image: url(./src/images/Likeblack.png);
 }
@@ -98,11 +98,11 @@ header {
     top: 15px;
     background-image: url(./src/images/Urna.png);
     background-repeat: no-repeat;
-    background-color: transparent;  
+    background-color: transparent;
     cursor: pointer;
     border: none;
-    
-    
+
+
 
 }
 
@@ -129,6 +129,18 @@ header {
     padding: 35px;
 }
 
+.picture-cont {
+    width: auto;
+    height: auto;
+}
+
+.popup__picture-in-container {
+    /* display: inline-block; */
+    /* max-height: 600px; */
+    max-height: 75vh;
+    max-width: 75vw;
+}
+
 .popup__container--active {
     display: block;
 }
@@ -136,16 +148,17 @@ header {
 
 .popup__button-close {
     position: absolute;
-    left: 440px;
-    bottom: 335px;
+    top: -30px;
+    right: -40px;
     cursor: pointer;
 }
 
 .popup--active {
-    display: flex;    
+    display: flex;
 }
 
 .popup__container input {
+    position: relative;
     width: 355px;
     border: 0;
     border-bottom: 1px solid black;
@@ -153,6 +166,22 @@ header {
     margin-bottom: 25px;
     box-sizing: border-box;
 }
+
+
+.popup__container .warning {
+    border-bottom: 1px solid red;
+    color: red;
+}
+
+.popup__container .warning::placeholder {
+    color: red;
+}
+
+input:invalid {
+    border-bottom: 2px solid red;
+}
+
+
 
 .popup__button-submit {
     width: 355px;
