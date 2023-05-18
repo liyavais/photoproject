@@ -167,6 +167,16 @@ header {
     box-sizing: border-box;
 }
 
+/* .error_inf {
+    display: none;
+    color: red;
+    margin: 0;
+    position: absolute;
+    bottom: 169px;
+    left: 40px;
+    font-size: 14px;
+} */
+
 
 .popup__container .warning {
     border-bottom: 1px solid red;
@@ -176,12 +186,6 @@ header {
 .popup__container .warning::placeholder {
     color: red;
 }
-
-input:invalid {
-    border-bottom: 2px solid red;
-}
-
-
 
 .popup__button-submit {
     width: 355px;
@@ -193,3 +197,10 @@ input:invalid {
     cursor: pointer;
 
 }
+
+.popup__button-submit[disabled] {
+    background-color: lightgray;
+    color: white;
+    cursor: not-allowed;
+    border: 0;
+  }

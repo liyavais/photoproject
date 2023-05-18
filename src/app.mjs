@@ -1,6 +1,6 @@
 import { renderCardsList } from './modules/render-cards.mjs'
 import { initialCards } from './data/cards-list.mjs'
-import { inputLengthValidation } from './data/validation.mjs'
+import { inputValidationHandler } from './data/validation.mjs'
 
 
 
@@ -67,9 +67,7 @@ addNewImageButton.onclick = (evt) => {
     
 }
 
-
-window.addEventListener('DOMContentLoaded', inputLengthValidation)
-
+window.addEventListener('DOMContentLoaded', inputValidationHandler)
 window.addEventListener('DOMContentLoaded', renderCardsList)
 
 
