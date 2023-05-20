@@ -1,8 +1,11 @@
 import { renderCardsList } from './modules/render-cards.mjs'
 import { initialCards } from './data/cards-list.mjs'
-import { inputValidationHandler } from './data/validation.mjs'
+// import { inputValidationHandler } from './data/validation.mjs'
+import { editProfileInputsValidation } from './data/validation2.mjs'
 
+import { initializeApp } from '../node_modules/firebase/app'
 
+console.log(initializeApp)
 
 const buttonNewImage = document.querySelector('.profile__add-new-image-button')
 const popUpGroup = document.querySelector('.popup-group')
@@ -67,8 +70,10 @@ addNewImageButton.onclick = (evt) => {
     
 }
 
-window.addEventListener('DOMContentLoaded', inputValidationHandler)
+// window.addEventListener('DOMContentLoaded', inputValidationHandler)
 window.addEventListener('DOMContentLoaded', renderCardsList)
+window.addEventListener('DOMContentLoaded', editProfileInputsValidation)
+
 
 
 
