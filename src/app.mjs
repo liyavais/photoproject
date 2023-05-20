@@ -66,6 +66,9 @@ addNewImageButton.onclick = (evt) => {
     
 }
 
+
+
+
 // window.addEventListener('DOMContentLoaded', inputValidationHandler)
 window.addEventListener('DOMContentLoaded', renderCardsList)
 window.addEventListener('DOMContentLoaded', editProfileInputsValidation)
