@@ -44,7 +44,7 @@ module.exports = {
     resolve: {
         extensions: ['.mjs', '.js'],
     }, devServer: {
-        static: path.resolve(__dirname, 'dist'),
+        static: path.resolve(__dirname, './'),
         port: 9000
     },
 };

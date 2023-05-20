@@ -3,10 +3,6 @@ import { initialCards } from './data/cards-list.mjs'
 // import { inputValidationHandler } from './data/validation.mjs'
 import { editProfileInputsValidation } from './data/validation2.mjs'
 
-// import { initializeApp } from '../node_modules/firebase/app'
-
-// console.log(initializeApp)
-
 const buttonNewImage = document.querySelector('.profile__add-new-image-button')
 const popUpGroup = document.querySelector('.popup-group')
 const buttonsPopupClose = document.querySelectorAll('.popup__button-close')
