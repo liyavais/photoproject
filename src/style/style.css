@@ -21,6 +21,7 @@ header {
     gap: 30px;
     align-items: center;
     margin-bottom: 50px;
+    /* justify-content: first baseline; */
 
 }
 

@@ -3,6 +3,7 @@ import { initialCards } from './data/cards-list.mjs'
 // import { inputValidationHandler } from './data/validation.mjs'
 import { editProfileInputsValidation } from './data/validation2.mjs'
 
+
 const buttonNewImage = document.querySelector('.profile__add-new-image-button')
 const popUpGroup = document.querySelector('.popup-group')
 const buttonsPopupClose = document.querySelectorAll('.popup__button-close')
@@ -57,13 +58,13 @@ addNewImageButton.onclick = (evt) => {
     const newObject = {
         name: placeName.value,
         link: linkByUser.value
-      }
-      console.log(newObject)
+    }
+    console.log(newObject)
     initialCards.push(newObject)
     renderCardsList()
     closeAllPopups()
     addNewImagePopup.querySelector('form').reset()
-    
+
 }
 
 
@@ -73,6 +74,21 @@ addNewImageButton.onclick = (evt) => {
 window.addEventListener('DOMContentLoaded', renderCardsList)
 window.addEventListener('DOMContentLoaded', editProfileInputsValidation)
 
+
+const getData = async (url) => {
+    const res = await fetch(url)
+    const json = await res.json()
+    return json
+}
+
+const url = 'https://api.thecatapi.com/v1/images/search?limit=10'
+
+try {
+    const dataCat = await getData(url)
+    console.log(dataCat)
+} catch (error) {
+    console.log(error.message)
+}
 
 
 
