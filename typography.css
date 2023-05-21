@@ -10,7 +10,17 @@ h1 {
 
 }
 
-.profile__add-new-image-button {
+.profile__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 90px;
+    /* align-items: center; */
+    /* width: 250px; */
+
+}
+
+.profile__buttons button {
     background-color: unset;
     border: 1px solid white;
     width: 150px;
@@ -21,11 +31,18 @@ h1 {
     line-height: 0;
     margin-left: auto;
     cursor: pointer;
+    
 }
 
-.profile__add-new-image-button:hover {
+
+.profile__buttons button:hover {
     border: 1px solid rgb(159, 159, 159);
     color:  rgb(159, 159, 159);
+}
+
+.profile__buttons .button__cat {
+    font-size: 15px;
+
 }
 
 .card__name {
