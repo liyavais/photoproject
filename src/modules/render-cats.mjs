@@ -20,8 +20,8 @@ async function renderCats() {
     console.log(catsArray)
 
     const images = document.querySelectorAll('.card__img')
-    for (let image of images) {
-        image.src = catsArray[0].url
+    for (let i = 0; images.length > i; i++) {
+        images[i].src = catsArray[i].url
     }
 
 }
