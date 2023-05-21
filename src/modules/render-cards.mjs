@@ -4,7 +4,6 @@ const cardContainer = document.querySelector('.card-container')
 
 function renderCard(card) {
 
-
    let newCard = document.createElement('div')
    let image = document.createElement('img')
    let cardDescription = document.createElement('div')
@@ -58,8 +57,6 @@ function renderCard(card) {
       initialCards.splice(i, 1)
       renderCardsList()
    }
-
-
 
 }
 

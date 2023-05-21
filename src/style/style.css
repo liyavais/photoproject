@@ -80,7 +80,7 @@ header {
 .card__like {
     height: 19px;
     padding-right: 18px;
-    background-image: url(./src/images/Vector.svg);
+    background-image: url(../images/Vector.svg);
     background-repeat: no-repeat;
     border: none;
     background-color: transparent;
@@ -88,7 +88,7 @@ header {
 }
 
 .added_like {
-    background-image: url(./src/images/Likeblack.png);
+    background-image: url(../images/Likeblack.png);
 }
 
 .card__delete {
@@ -97,7 +97,7 @@ header {
     width: 20px;
     right: 10px;
     top: 15px;
-    background-image: url(./src/images/Urna.png);
+    background-image: url(../images/Urna.png);
     background-repeat: no-repeat;
     background-color: transparent;
     cursor: pointer;
