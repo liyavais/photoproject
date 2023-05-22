@@ -1,5 +1,5 @@
 import { renderCardsList } from './modules/render-cards.mjs'
-import { initialCards } from './data/cards-list.mjs'
+// import { initialCards } from './data/cards-list.mjs'
 // import { inputValidationHandler } from './data/validation.mjs'
 import { editProfileInputsValidation } from './data/validation2.mjs'
 import { renderCats } from './modules/render-cats.mjs'
@@ -72,21 +72,55 @@ addNewImageButton.onclick = (evt) => {
 catButton.onclick = renderCats
 
 
+async function postCards(cards) {
+fetch('https://photoproject-63711-default-rtdb.firebaseio.com/db/cards-list.json', {
+    method: 'POST',
+    body: JSON.stringify(cards)
+})
+}
 
+// async function getCards() {
+//     fetch('https://photoproject-63711-default-rtdb.firebaseio.com/database/cards-list.json', {
+//         method: 'GET'
+//         })
+//         .then(response => response.json())
+//         .then(response => console.log(response))
+           
+//     }
+
+
+// postCards(initialCards)
+
+
+async function getCards() {
+    const getData = async (url) => {
+        const res = await fetch(url)
+        const json = await res.json()
+        // console.log(json)
+        return json
+    }
+
+    const url = 'https://photoproject-63711-default-rtdb.firebaseio.com/database/cards-list.json'
+    
+
+    const cardsListFromDatabase = await getData(url)
+    return cardsListFromDatabase
+}
+
+const cardsNew = await getCards()
+console.log(cardsNew)
+
+
+for (let key in cardsNew){
+    console.log(cardsNew[key])
+    renderCardsList(cardsNew[key])
+}
 
 // window.addEventListener('DOMContentLoaded', inputValidationHandler)
-window.addEventListener('DOMContentLoaded', renderCardsList)
+
 window.addEventListener('DOMContentLoaded', editProfileInputsValidation)
 
-
-
-
-
-
-
-
-
-
+console.log(renderCardsList)
 
 window.openNeededPopup = openNeededPopup
 

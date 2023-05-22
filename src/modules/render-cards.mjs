@@ -1,4 +1,7 @@
+
 import { initialCards } from "../data/cards-list.mjs"
+// import { cardsNew } from "../app.mjs"
+
 
 const cardContainer = document.querySelector('.card-container')
 
@@ -52,17 +55,18 @@ function renderCard(card) {
    }
 
    deleteButton.onclick = function () {
-      let i = initialCards.indexOf(card)
+      let i = cardsNew.indexOf(card)
       console.log(i)
-      initialCards.splice(i, 1)
+      cardsNew.splice(i, 1)
       renderCardsList()
    }
 
 }
 
-function renderCardsList() {
+function renderCardsList(cardsNew) {
    cardContainer.innerHTML = ''
-   for (let card of initialCards) {
+   for (let card of cardsNew) {
+      console.log(card)
       renderCard(card)
    }
 }
