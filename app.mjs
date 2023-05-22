@@ -1,9 +1,12 @@
-import { renderCardsList } from './modules/render-cards.mjs'
-import { initialCards } from './data/cards-list.mjs'
+import { renderCardsList } from './src/modules/render-cards.mjs'
+import { initialCards } from './src/data/cards-list.mjs'
 // import { inputValidationHandler } from './data/validation.mjs'
-import { editProfileInputsValidation } from './data/validation2.mjs'
-import { renderCats } from './modules/render-cats.mjs'
+import { editProfileInputsValidation } from './src/data/validation2.mjs'
+import { renderCats } from './src/modules/render-cats.mjs'
 
+import { firebase } from './firebase.mjs'
+
+console.log(firebase)
 
 const buttonNewImage = document.querySelector('.profile__add-new-image-button')
 const popUpGroup = document.querySelector('.popup-group')
